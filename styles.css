@@ -21,3 +21,21 @@ main {
 article {
     margin-bottom: 2em;
 }
+
+#post-form-section {
+    margin-bottom: 2em;
+}
+
+#post-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#post-form label {
+    margin-top: 1em;
+}
+
+#post-form input, #post-form textarea, #post-form button {
+    padding: 0.5em;
+    margin-top: 0.5em;
+}
