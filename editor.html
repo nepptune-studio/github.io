@@ -1,27 +1,28 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹 HTML 편집기</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>웹 HTML 편집기</h1>
-    </header>
-    <main>
-        <section id="editor-container">
-            <textarea id="html-editor" placeholder="여기에 HTML 코드를 작성하세요..."></textarea>
-        </section>
-        <section id="preview-container">
-            <h2>미리보기</h2>
-            <iframe id="preview-frame"></iframe>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 HTML 편집기</p>
-    </footer>
-    <script src="editor.js"></script>
-</body>
-</html>
+<!-- Include Quill stylesheet -->
+<link
+  href="https://cdn.jsdelivr.net/npm/quill@2/dist/quill.snow.css"
+  rel="stylesheet"
+/>
+
+<!-- Create the toolbar container -->
+<div id="toolbar">
+  <button class="ql-bold">Bold</button>
+  <button class="ql-italic">Italic</button>
+</div>
+
+<!-- Create the editor container -->
+<div id="editor">
+  <p>Hello World!</p>
+  <p>Some initial <strong>bold</strong> text</p>
+  <p><br /></p>
+</div>
+
+<!-- Include the Quill library -->
+<script src="https://cdn.jsdelivr.net/npm/quill@2/dist/quill.js"></script>
+
+<!-- Initialize Quill editor -->
+<script>
+  const quill = new Quill("#editor", {
+    theme: "snow",
+  });
+</script>
